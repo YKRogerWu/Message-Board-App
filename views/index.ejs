@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave a Message!</title>
+</head>
+<body>
+    <form class="message-form" action="/submit" method="get">
+            
+            Name:<input class="form-text-area" type="text" name="name">
+            Email:<input class="form-text-area" type="email" name="email">
+            Message:<textarea class="form-text-area" name="msg" style="height: 120px; width: 380px;"></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <a style="color: blue;"><%= warnmsg %></a>
+    <div class="message-container">
+        <% for(let i=data.length-1; i>=0; i--){ %>
+            <div class="name"> <%= data[i].name %> (from: <%= data[i].email %>) said:</div>
+            <div class="message-made"><%= data[i].msg %></div>    
+                <div class="timestamp"><%= data[i].timestamp %></div>
+        <% } %>
+    </div>
+</body>
+</html>
+
+<style>
+.messge-form{
+    background-color: rgb(236, 134, 134);
+}
+.form-text-area{
+    display: block;
+}
+.message-container{
+    width: 400px;
+    margin: 30px 0;
+    border-radius: 10px;
+}
+.name{
+    padding: 3px 5px;
+    margin-top: 20px;
+    background-color: rgb(255, 158, 158);
+    border-radius: 10px 10px 0px 0px;
+}
+.message-made{
+    background-color: pink;
+    border-top: rgb(255, 255, 255) 2px solid;
+    border-bottom: rgb(255, 255, 255) 2px solid;
+    padding: 8px;
+}
+.timestamp{
+    font-size: 10pt;
+    text-align: right;
+    padding: 0px 10px;
+    background-color: pink;
+    border-radius: 0px 0px 10px 10px;
+}
+</style>
