@@ -20,7 +20,7 @@
         <% for(let i=data.length-1; i>=0; i--){ %>
             <div class="name"> <%= data[i].name %> (from: <%= data[i].email %>) said:</div>
             <div class="message-made"><%= data[i].msg %></div>    
-                <div class="timestamp"><%= data[i].timestamp %></div>
+            <div class="timestamp"><%= data[i].timestamp %></div>
         <% } %>
     </div>
 </body>
@@ -37,12 +37,30 @@
     width: 400px;
     margin: 30px 0;
     border-radius: 10px;
+    display: inline-block;
+}
+.msg-footer{
+    display:flex;
 }
 .name{
+    
     padding: 3px 5px;
     margin-top: 20px;
     background-color: rgb(255, 158, 158);
     border-radius: 10px 10px 0px 0px;
+}
+.msg-header-function{
+    
+    width:15%;
+    text-align: center;
+    background-color: rgb(255, 220, 192);
+    padding: 3px 5px;
+    margin-top: 20px;
+    border-radius: 10px 10px 0px 0px;
+}
+.msg-header-function:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 .message-made{
     background-color: pink;
@@ -51,6 +69,7 @@
     padding: 8px;
 }
 .timestamp{
+    
     font-size: 10pt;
     text-align: right;
     padding: 0px 10px;

@@ -1,9 +1,16 @@
-var HTTP_PORT = process.env.PORT || 8080;
 //setup mongoDB
 const mongodb = require("mongodb");
 const uri = "mongodb+srv://root:root123@cluster0.yc0lz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new mongodb.MongoClient(uri);
 let db = null;
+/*********************************************************************************
+*   Message Board App
+*   Author  : YU-KAI (ROGER) WU
+*   Date    : 2022-02-04
+*   GitHub Repository URL: https://github.com/YKRogerWu
+*
+********************************************************************************/ 
+
 
 //setup Moment.js
 const moment = require("moment");
@@ -21,6 +28,8 @@ client.connect(async function(err){
 //setup Express.js 
 const express = require("express");
 const { redirect } = require("express/lib/response");
+
+//setup application object
 const app = express();
 
 //setup EJS view engine
@@ -66,4 +75,8 @@ app.get("/submit", async (req, res) =>{
 })
 
 // setup http server to listen on HTTP_PORT
-app.listen(HTTP_PORT);
+app.listen(3000, err =>{
+    if(!err){
+        console.log("Server Started");
+    }
+});
