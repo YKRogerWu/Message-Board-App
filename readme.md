@@ -10,5 +10,5 @@ A simple forum website that allows users to use their name and write messages.
 ### Built with
 * Environment -- Node.js
 * Framework -- Express.js 
-* view engine -- EJS
+* View engine -- EJS
 * Datebase -- MongoDB
