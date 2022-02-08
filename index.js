@@ -1,16 +1,16 @@
+/*********************************************************************************
+*   Message Board App
+*   Author  : YU-KAI (ROGER) WU
+*   Date    : 2022-02-04
+*   GitHub Repository URL: https://github.com/YKRogerWu/Message-Board-App
+*
+********************************************************************************/ 
+
 //setup mongoDB
 const mongodb = require("mongodb");
 const uri = "mongodb+srv://root:root123@cluster0.yc0lz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new mongodb.MongoClient(uri);
 let db = null;
-/*********************************************************************************
-*   Message Board App
-*   Author  : YU-KAI (ROGER) WU
-*   Date    : 2022-02-04
-*   GitHub Repository URL: https://github.com/YKRogerWu
-*
-********************************************************************************/ 
-
 
 //setup Moment.js
 const moment = require("moment");
