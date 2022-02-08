@@ -17,7 +17,7 @@
     </form>
     <a style="color: blue;"><%= warnmsg %></a>
     <div class="message-container">
-        <% for(let i=data.length-1; i>=0; i--){ %>
+        <% for(let i = 0; i < data.length; i++){ %>
             <div class="name"> <%= data[i].name %> (from: <%= data[i].email %>) said:</div>
             <div class="message-made"><%= data[i].msg %></div>    
             <div class="timestamp"><%= data[i].timestamp %></div>

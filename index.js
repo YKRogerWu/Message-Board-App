@@ -41,7 +41,7 @@ var warnmsg = "";
 //routing and request string
 app.get("/", async function(req, res){
     const collection = db.collection("member-message");
-    let result = await collection.find({});
+    let result = await collection.find({}).sort({timestamp: -1}); //"sort" to chronologically arrange message by their date/time
     let data = [];
     await result.forEach(member =>{
         data.push(member);
@@ -51,7 +51,7 @@ app.get("/", async function(req, res){
 })
 //route to extract user's input to DB
 app.get("/submit", async (req, res) =>{
-    const name = req.query.name.trim();
+    const name = req.query.name.trim(); //remove the leading and ending spaces
     if(!name){
         warnmsg = "Please enter a valid name :)";
         res.redirect("/");
