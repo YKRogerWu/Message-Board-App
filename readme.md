@@ -1,6 +1,6 @@
 ##  Message Board App
 ### Description
-A simple forum website that allows users to use their name and write messages.
+A simple forum website that allows users to customize their name and write messages.
 
 | version   | features                               | Date       |
 | --------- | -------------------------------------- | -----------|
